@@ -65,14 +65,14 @@ var mongoose = require('mongoose');
 // ################################################################
 
 
-//var config = require('./config.js')
-var port = 8181;
+var config = require('./settings.js')
+var port = config.port;
 var https = require('https');
 var app = require('express')();
 var options = {
-  //  key  : config.key,
-  //  cert : config.cert,
-  //  ca   : config.ca
+   key  : config.key,
+   cert : config.cert,
+   ca   : config.ca
 };
 
 // =================================
