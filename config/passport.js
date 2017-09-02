@@ -10,7 +10,7 @@ var LinkedInStrategy = require('passport-linkedin').Strategy;
 var User       = require('../app/models/user');
 
 // load the auth variables
-var configAuth = require('./auth');
+var configAuth = require('./authco.js');
 
 // used for debugging purposes to easily print out object data
 var util = require('util');
