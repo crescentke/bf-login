@@ -7,7 +7,7 @@ var fs = require('fs');
 
 module.exports = {
   port: 5000,
-  key  : fs.readFileSync(''),
-  cert : fs.readFileSync(''),
-  ca: [fs.readFileSync('')]
+  // key  : fs.readFileSync(''),
+  // cert : fs.readFileSync(''),
+  // ca: [fs.readFileSync('')]
 };
