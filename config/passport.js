@@ -10,7 +10,7 @@ var LinkedInStrategy = require('passport-linkedin').Strategy;
 var User       = require('../app/models/user');
 
 // load the auth variables
-var configAuth = require('./auth'); 
+var configAuth = require('./auth');
 
 // used for debugging purposes to easily print out object data
 var util = require('util');
@@ -261,7 +261,7 @@ module.exports = function(passport) {
                         // if there is a user id already but no token (user was linked at one point and then removed)
                         if (!user.linkedin.token) {
                             user.linkedin.token       = token;
-                            user.linkedin.name        = profile.displayName;                    
+                            user.linkedin.name        = profile.displayName;
                             user.linkedin.profile     = profile;
 
                             user.save(function(err) {
@@ -320,7 +320,7 @@ module.exports = function(passport) {
 
     },
     function(req, token, tokenSecret, profile, done) {
-        
+
         // asynchronous
         process.nextTick(function() {
 
@@ -384,7 +384,7 @@ module.exports = function(passport) {
                     return done(null, user);
                 });
             }
-            
+
         });
 
     }));
@@ -400,7 +400,7 @@ module.exports = function(passport) {
         passReqToCallback : true // allows us to pass in the req from our route (lets us check if a user is logged in or not)
     },
     function(req, token, refreshToken, profile, done) {
-        
+
         // asynchronous
         process.nextTick(function() {
 

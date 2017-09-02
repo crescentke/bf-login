@@ -65,7 +65,7 @@ var mongoose = require('mongoose');
 // ################################################################
 
 
-var config = require('./config/config.js')
+var config = require('./config.js')
 var port = config.port;
 var https = require('https');
 var app = require('express')();
