@@ -12,6 +12,10 @@ Complete write-up for this application can be found here: http://www.InternetOfL
 Cory Guynn, 2016
 www.InternetOfLego.com
 
+##Backup
+http://10.13.14.20/portal/public/
+http://10.13.14.20/portal/public/sgr.mp4
+
 
 
 
@@ -31,7 +35,7 @@ www.InternetOfLego.com
 
 * Dashboard --> Wireless --> Configure --> Splash Page Select: Use custom URL
 
-* Enter the URL for the splash page. 
+* Enter the URL for the splash page.
 
 Sign-on w/ RADIUS
 
@@ -99,7 +103,7 @@ module.exports = {
 ```
 ###config/config.js
 
-This is where you will define the web port that the server listens on (i.e. 8181) and the SSL certificate information. You will need to create your own self-signed certificate or purchase one. This examples uses a GoDaddy SSL certificate and places the files in an SSL directory. 
+This is where you will define the web port that the server listens on (i.e. 8181) and the SSL certificate information. You will need to create your own self-signed certificate or purchase one. This examples uses a GoDaddy SSL certificate and places the files in an SSL directory.
 ```
 // Configure the app settings here such as Web port, certificates, etc.
 
@@ -121,10 +125,10 @@ Store the connection string to your MongoDB database here
 // config/database.js
 module.exports = {
 
-    'url' : 'mongodb://localhost/excap' 
+    'url' : 'mongodb://localhost/excap'
 
 };
-``` 
+```
 
 #Start the Server and Test
 
@@ -152,7 +156,7 @@ You can see the session data by going to the MongoDB REST API or exploring the M
 
 #Security Notes
 
-- You should run this using SSL. 
+- You should run this using SSL.
 - Store your session and user data in a secure system behind a firewall
 - Disable the built-in MongoDB Rest interface (which is for demo only)
 
